@@ -1,12 +1,12 @@
-import express, {Request, Response} from "express"
+import express, {} from "express"
+import UserRoutes from "./routes/UserRoutes"
 
 const app = express()
 const PORT = 3000
 
 app.use(express.json())
+app.use("/api/users", UserRoutes)
 
-app.get("/api/user", (req : Request, res : Response) => {
-    res.json({"materia" : "DevOps"})
-})
+
 
 app.listen(PORT, () => {console.log("fimose")})
